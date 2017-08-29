@@ -4,6 +4,12 @@ var roleBuilder = require('roleBuilder');
 
 module.exports.loop = function () {
 
+    var utilityBody = [WORK,CARRY,MOVE,MOVE];
+    
+    if(Game.rooms['sim'].energyCapacityAvailable > 350) {
+        var utilityBody = [WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE];
+    }
+    
     var tower = Game.getObjectById('TOWER_ID');
     if(tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
