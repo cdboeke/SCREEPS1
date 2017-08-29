@@ -33,7 +33,7 @@ module.exports.loop = function () {
         console.log('Spawning new harvester: ' + newName);
     }
     else if(upgraders.length < 1) {
-        var newName = Game.spawns['Spawn1'].createCreep([WORK,CARRY,MOVE], undefined, {role: 'upgraders'});
+        var newName = Game.spawns['Spawn1'].createCreep([WORK,CARRY,MOVE], undefined, {role: 'upgrader'});
         console.log('Spawning new upgraders: ' + newName);
     }
     else if(builders.length < 2) {
